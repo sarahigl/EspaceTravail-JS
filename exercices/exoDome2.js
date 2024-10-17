@@ -1,3 +1,4 @@
+const { text } = require("body-parser");
 
 //! EXO 20.1
 const divTexteAjout = document.querySelector('.ajoutTexte');
@@ -42,3 +43,13 @@ function toggleClick(){
 }
 btnToggle.addEventListener('click', toggleClick)
 
+//texte area qui copie texte
+const copieTexte = document.createElement('p');
+const emplacement = document.querySelector('.container');
+const texteArea = document.querySelector('.texte');
+
+texteArea.addEventListener('input', function() {
+    copieTexte.innerHTML = texteArea.value; // Met à jour le contenu de copieTexte
+});
+
+emplacement.append(copieTexte);

@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff0f5; /* Fond rose très pâle */
+    padding-top: 70px; /* Ajout de padding pour compenser la navbar fixe */
+}
+
+.bg-pink {
+    background-color: #ffc0cb !important; /* Rose pastel */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #8b4b62 !important; /* Rose foncé pour le texte */
+}
+
+.navbar-light .nav-link:hover,
+.navbar-light .navbar-brand:hover {
+    color: #ff69b4 !important; /* Rose vif au survol */
+}
+
+h1 {
+    color: #db7093; /* Rose moyen */
+    font-weight: 300;
+}
+
+p {
+    color: #8b4b62; /* Rose foncé */
+}
+
+.dropdown-menu {
+    background-color: #fff0f5; /* Fond rose très pâle */
+    border: 1px solid #ffc0cb;
+}
+
+.dropdown-item:hover {
+    background-color: #ffc0cb; /* Rose pastel au survol */
+}
+
+
+

@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <title>Accueil</title>
 </head>
 <body>
     <div id="header"></div>
-    <div class="container mt-5 pt-5">
-        <h1 class="text-center">Bienvenue sur mon projet</h1>
-        <p class="text-center">Espace de travail de Sarah</p>
+    
+    <div id="content" class="container mt-5 pt-5">
+        <div id="content-wrap" class="container mt-5 pt-5">
+            <!--genéré coté javascript-->
+        </div>
+        <footer class="footer">
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="loadHeader.js"></script>
-    <script>
-        $(function(){
-            loadHeader();
-        });
-    </script>
+    <script type="module" src="/main.js"></script>
 </body>
 </html>

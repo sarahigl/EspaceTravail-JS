@@ -1,5 +1,6 @@
 export async function quoteReader(){
     let URL = 'https://zenquotes.io/api/quotes/';
+    //proxy => CORS pb 
     let proxy = 'https://api.allorigins.win/get?url=';
 
     try {
@@ -11,7 +12,7 @@ export async function quoteReader(){
             
             const div1 = document.querySelector('#content');
             let quoteDay = document.createElement('p');
-
+//array of objects => parse 
             let content = JSON.parse(dataTransformed.contents);
             let result = content[0];
             let quoteFirst = result.q;

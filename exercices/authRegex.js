@@ -3,18 +3,21 @@ let signinForm = document.querySelector('#signin-user-form');
 let btnSwitch = document.querySelector('#switch');
 
 
+//alternance des formulaires (coté HTML ajout function onclick())
 
-function switchForm(){
-    loginForm.style.display = 'block';
-    signinForm.style.display = 'none';
+function toggle(id,id2) {
+  let e = document.getElementById(id);
+  let e2 = document.getElementById(id2)
+  if (e.style.display == 'none' || e2.style.display == 'block') {
+    e.style.display = 'block';
+    e2.style.display = 'none';
+  } 
+  else {
+    e.style.display = 'none';
+    e2.style.display = 'block'
+  }
 }
 
-btnSwitch.addEventListener('click', (event)=>{
-    if(event){
-        console.log('clicked')
-        switchForm()
-    }
-});
 
 //!REGEX 
 let signinInput = document.querySelector('#mail');

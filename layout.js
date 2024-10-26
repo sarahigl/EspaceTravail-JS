@@ -13,7 +13,7 @@ export function setupLayout() {
             id: 'exercices-dropdown',
             children: [
                 { label: 'API', href: './exercices/API.html' },
-                { label: 'Auth Regex', href: './exercices/authRegex.html' },
+                { labe1: 'Auth Regex', href: './exercices/authRegex.html' },
                 { label: 'Class', href: './exercices/Class.html' },
                 { label: 'Exo DOM', href: './exercices/exoDom.html' },
                 { label: 'Firebase', href: './exercices/firebase.html' },
@@ -25,10 +25,10 @@ export function setupLayout() {
             label: 'Cours',
             id: 'cours-dropdown',
             children: [
-                { label: 'Notion Base JS', href: './cours/js-notion.pdf' },
-                { label: 'Firebase avec JS', href: './cours/js-firebase.pdf' },
-                { label: 'Class avec JS', href: './cours/class-js.pdf' },
-                { label: 'DOM avec JS', href: './cours/dom-js.pdf' }
+                { label: 'Notion Base JS', href: './cours/js-notion.html' },
+                { label: 'Firebase avec JS', href: './cours/js-firebase.html' },
+                { label: 'Class avec JS', href: './cours/class-js.html' },
+                { label: 'DOM avec JS', href: './cours/dom-js.html' }
             ]
         }
     ];

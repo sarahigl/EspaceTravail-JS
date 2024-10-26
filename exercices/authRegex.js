@@ -11,8 +11,7 @@ function toggle(id,id2) {
   if (e.style.display == 'none' || e2.style.display == 'block') {
     e.style.display = 'block';
     e2.style.display = 'none';
-  } 
-  else {
+  } else {
     e.style.display = 'none';
     e2.style.display = 'block'
   }

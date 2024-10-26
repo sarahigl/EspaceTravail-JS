@@ -10,7 +10,7 @@ export async function quoteReader(){
             const dataTransformed = await response.json();
             console.log(dataTransformed);
             
-            const div1 = document.querySelector('#content');
+            const div1 = document.querySelector('#content-wrap');
             let quoteDay = document.createElement('p');
 //array of objects => parse 
             let content = JSON.parse(dataTransformed.contents);

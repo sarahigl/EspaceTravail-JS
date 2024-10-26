@@ -44,7 +44,7 @@ document.getElementById('formTest').addEventListener('submit', function(event) {
 //regex chartDecimal charSpecial
 //fonction match() si match pas avec regex 1 et 2 msg erreur
 //msg confirmation 
-
+/*
                                 CORRECTION
                                 
 const loginInput = document.querySelector('#exampleInputEmail1');
@@ -91,4 +91,4 @@ const loginInput = document.querySelector('#exampleInputEmail1');
     userMessage.style.border ='5px solid green'
   }
 
- })
+ })*/

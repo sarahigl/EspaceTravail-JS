@@ -1,38 +1,33 @@
 export function headerFunc(){
     let headerTag = document.querySelector('#header');
-
+    
     let nav = document.createElement('nav');
     nav.classList = 'navbar navbar-expand-lg navbar-light bg-pink fixed-top'
-
-    let container = document.createElement('div');
-    container.className = 'container-fluid';
+    nav.style.position = 'absolute';
 
     let nomProjet = document.createElement('a');
     nomProjet.className = 'navbar-brand';
-    nomProjet.innerText = 'Espace de travail JS';
-    nomProjet.addEventListener('click', () =>{
-        window.location.href = ('./index.html');
-    })
+    nomProjet.innerText = 'Hub Javascript';
 
+// responsive btn => container fluid supprimé utiliser nav pour responsive btn
+    // let btnNav = document.createElement('button');
+    // btnNav.className = 'navbar-toggler';
+    // btnNav.type = 'button';
+    // btnNav.setAttribute = ('data-bs-toggle', 'collapse');
+    // btnNav.setAttribute = ('data-bs-target', '#navbarNav');
+    // btnNav.setAttribute = ('aria-controls', 'navbarNav');
+    // btnNav.setAttribute = ('aria-expanded', 'false');
+    // btnNav.setAttribute = ('aria-label', 'Toggle navigation');
 
-    let btnNav = document.createElement('button');
-    btnNav.className = 'navbar-toggler';
-    btnNav.type = 'button';
-    btnNav.setAttribute = ('data-bs-toggle', 'collapse');
-    btnNav.setAttribute = ('data-bs-target', '#navbarNav');
-    btnNav.setAttribute = ('aria-controls', 'navbarNav');
-    btnNav.setAttribute = ('aria-expanded', 'false');
-    btnNav.setAttribute = ('aria-label', 'Toggle navigation');
-
-    let span = document.createElement('span');
-    span.className = 'navbar-toggler-icon';
+    // let span = document.createElement('span');
+    // span.className = 'navbar-toggler-icon';
         
 
     header.appendChild(nav);
-    nav.appendChild(container);
-    container.appendChild(nomProjet);
-    container.appendChild(btnNav);
-    btnNav.appendChild(span);
+    nav.appendChild(nomProjet);
+    // container.appendChild(nomProjet);
+    // container.appendChild(btnNav);
+    // btnNav.appendChild(span);
  
     return headerTag;
 }
@@ -41,6 +36,8 @@ export function generateNavMenu(navItems) {
     let ul = document.createElement('ul');
     ul.id = 'navbarNav';
     ul.className = 'navbar-nav me-auto mb-2 mb-lg-0';
+    
+    //ul.style.position = 'static';
 
     navItems.forEach(item => {
         let li = document.createElement('li');
@@ -57,6 +54,8 @@ export function generateNavMenu(navItems) {
 
             let div = document.createElement('div');
             div.className = 'dropdown-menu';
+
+            // div.style.position = 'static';
             div.id = item.id;
 
             item.children.forEach(child => {
@@ -86,6 +85,5 @@ export function generateNavMenu(navItems) {
 }
 export function addNavMenuToHeader(navMenu) {
     let nav = document.querySelector('nav');
-    let container = nav.querySelector('.container-fluid');
-    container.appendChild(navMenu);
+    nav.appendChild(navMenu);
 }

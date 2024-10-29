@@ -145,7 +145,7 @@ textesTab.forEach(p => {
 });
 
 const map3 = textesTab.map((nom) =>{
-  nom.innerText = "modifer !";
+  nom.innerText = "Tout ce passe en console !";
   return nom;
 });
 console.log(map3);

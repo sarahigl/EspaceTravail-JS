@@ -21,16 +21,16 @@ body {
     padding-bottom: 2.5rem;
 }
 h1 {
-    color: #db7093; /* Rose moyen */
+    color: #db7093; 
     font-weight: 300;
 }
 
 p {
-    color: #8b4b62; /* Rose foncé */
+    color: #8b4b62; 
 }
 
 .dropdown-menu {
-    background-color: #fff0f5; /* Fond rose très pâle */
+    background-color: #fff0f5;
     border: 1px solid #ffc0cb;
 }
 /* override de left = 0 (bootstrap)div dropdown menu se colle a gauche */
@@ -39,10 +39,10 @@ p {
 }
 
 .dropdown-item:hover {
-    background-color: #ffc0cb; /* Rose pastel au survol */
+    background-color: #ffc0cb; 
 }
 footer{
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     height: 2.5rem;

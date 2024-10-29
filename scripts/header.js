@@ -35,9 +35,7 @@ export function headerFunc(){
 export function generateNavMenu(navItems) {
     let ul = document.createElement('ul');
     ul.id = 'navbarNav';
-    ul.className = 'navbar-nav me-auto mb-2 mb-lg-0';
-    
-    //ul.style.position = 'static';
+    ul.classList = 'navbar-nav me-auto mb-2 mb-lg-0';
 
     navItems.forEach(item => {
         let li = document.createElement('li');
@@ -45,7 +43,7 @@ export function generateNavMenu(navItems) {
 
         if (item.children) {
             let a = document.createElement('a');
-            a.className = 'nav-link dropdown-toggle';
+            a.classList = 'nav-link dropdown-toggle';
             a.href = '#';
             a.role = 'button';
             a.dataset.bsToggle = 'dropdown';

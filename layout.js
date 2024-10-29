@@ -12,23 +12,22 @@ export function setupLayout() {
             label: 'Exercices',
             id: 'exercices-dropdown',
             children: [
-                { label: 'API', href: './exercices/API.html' },
-                { labe1: 'Auth Regex', href: './exercices/authRegex.html' },
-                { label: 'Class', href: './exercices/Class.html' },
-                { label: 'Exo DOM', href: './exercices/exoDom.html' },
-                { label: 'Firebase', href: './exercices/firebase.html' },
-                { label: 'Notion Base', href: './exercices/notionBase.html' },
-                { label: 'Regexp', href: './exercices/regexp.html' }
+                { label: 'API', href: '/exercices/api.html' },
+                { label: 'Class', href: '/exercices/class.html' },
+                { label: 'DOM', href: '/exercices/dom.html' },
+                { label: 'Firebase', href: '/exercices/firebase.html' },
+                { label: 'Notion Base', href: '/exercices/notionBase.html' },
+                { label: 'Regex', href: '/exercices/regex.html' }
             ]
         },
         {
             label: 'Cours',
             id: 'cours-dropdown',
             children: [
-                { label: 'Notion Base JS', href: './cours/js-notion.html' },
-                { label: 'Firebase avec JS', href: './cours/js-firebase.html' },
-                { label: 'Class avec JS', href: './cours/class-js.html' },
-                { label: 'DOM avec JS', href: './cours/dom-js.html' }
+                { label: 'Notion Base JS', href: '/cours/js-notion.html' },
+                { label: 'Firebase avec JS', href: '/cours/js-firebase.html' },
+                { label: 'Class avec JS', href: '/cours/class-js.html' },
+                { label: 'DOM avec JS', href: '/cours/dom-js.html' }
             ]
         }
     ];

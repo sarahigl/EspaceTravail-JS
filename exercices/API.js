@@ -14,6 +14,13 @@ const contactApi = () => {
     .then(data =>(console.log(data)))
     .catch(error => console.log("Erreur custom : " + error));
    };
+   divAPI.style.backgroundColor = 'yellow';
+   divAPI.style.width = '200px';
+//    divAPI.style.display = 'flex';
+//    divAPI.style.justifyContent = 'center'; //element non centré à cause de la width donc ajout de margin 
+   divAPI.style.textAlign = 'center';
+   divAPI.style.marginLeft = 'auto';
+   divAPI.style.marginRight = 'auto';
 contactApi();
 
 const contactApi2 =  async () => {
@@ -29,46 +36,54 @@ const contactApi2 =  async () => {
     return transformedData.results[0];
 }
 
-let randomUser = await contactApi2();
+const randomUser = await contactApi2();
 console.log ('randomUser', randomUser);
 
-if (randomUser) {
-    let UserCard = document.createElement('div');
-    UserCard.className = 'user-card';
+let UserCard = document.createElement('div');
+let div = document.querySelector('#content');
+UserCard.className = 'user-card';
+UserCard.classList = 'card p-3 w-40 mx-auto text-center bg-primary-subtle';
+UserCard.style.width = '300px';
+function random(){
+    if (randomUser) {    
+        let img = document.createElement('img');
+        img.src = randomUser.picture.large;
+        img.alt = 'Photo de ' + randomUser.name.first;
     
-    let img = document.createElement('img');
-    img.src = randomUser.picture.large;
-    img.alt = 'Photo de ' + randomUser.name.first;
-   
-    let name = document.createElement('h2');
-    name.innerText = `${randomUser.name.title}. ${randomUser.name.last} ${randomUser.name.first}`;
+        let name = document.createElement('h2');
+        name.innerText = `${randomUser.name.title}. ${randomUser.name.last} ${randomUser.name.first}`;
+        
+        let email = document.createElement('p');
+        email.innerText = `Email : ${randomUser.email}`;
     
-    let email = document.createElement('p');
-    email.innerText = `Email : ${randomUser.email}`;
-   
-    let address = document.createElement('p');
-    address.innerText = `Address : ${randomUser.location.postcode} - ${randomUser.location.city}, ${randomUser.location.state} - ${randomUser.location.country}`;
+        let address = document.createElement('p');
+        address.innerText = `Address : ${randomUser.location.postcode} - ${randomUser.location.city}, ${randomUser.location.state} - ${randomUser.location.country}`;
 
-    let phone = document.createElement('p');
-    phone.innerText = `Phone : ${randomUser.phone} - ${randomUser.cell}`;
+        let phone = document.createElement('p');
+        phone.innerText = `Phone : ${randomUser.phone} - ${randomUser.cell}`;
 
-    UserCard.appendChild(img);
-    UserCard.appendChild(name);
-    UserCard.appendChild(email);
-    UserCard.appendChild(address);
-    UserCard.appendChild(phone);
-    document.body.appendChild(UserCard); 
-} else {
-    console.error("pas d'utilisateur récupéré");
+        UserCard.appendChild(img);
+        UserCard.appendChild(name);
+        UserCard.appendChild(email);
+        UserCard.appendChild(address);
+        UserCard.appendChild(phone);
+        
+        div.appendChild(UserCard); 
+        
+    } else {
+        console.error("pas d'utilisateur récupéré");
+    };
 }
+random();
 
 const btnRandom = document.createElement('button');
 btnRandom.innerText = 'random user';
-userCard.appendChild(btnRandom);
+UserCard.append(btnRandom);
 
 btnRandom.addEventListener('click', ()=>{
     console.log("random user click");
     contactApi2();
+    //faire en sorte que les données de l'api remplace celles dans la card.
 })
 /*
 

@@ -4,6 +4,12 @@
 //condition input en vert si ok sinon rouge
 // if ? ou try catch ?
 
+            //MPD//
+//6 et 8 chart ok, sinon erreur
+//regex chartDecimal charSpecial
+//fonction match() si match pas avec regex 1 et 2 msg erreur
+//msg confirmation 
+
 document.getElementById('formTest').addEventListener('submit', function(event) {
 
     event.preventDefault(); //ne pas submit le form direct
@@ -27,7 +33,7 @@ document.getElementById('formTest').addEventListener('submit', function(event) {
         emailInput.style.border = "4px solid red";
         p.textContent = 'entrez un mail valide !';
     } 
-    //PASSWORD PARTIE
+    //PASSWORD PARTIE en cours
     const psd = document.querySelector('.password');
     const password = psd.value;
     const chartDecimal = "/\d/";
@@ -39,11 +45,6 @@ document.getElementById('formTest').addEventListener('submit', function(event) {
     }
 });
 
-            //MPD//
-//6 et 8 chart ok, sinon erreur
-//regex chartDecimal charSpecial
-//fonction match() si match pas avec regex 1 et 2 msg erreur
-//msg confirmation 
 /*
                                 CORRECTION
                                 

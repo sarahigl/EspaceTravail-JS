@@ -2,16 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div id="header"></div>
     <div id="content" class="container mt-5 pt-5">
+        <div class="container-fluid p-3">
         <div id="app" class="container-fluid min-vh-100">
             <h1>Ici on s'exerce sur Regex en JS</h1>
+            <!--genéré coté javascript-->
+            <form id="formTest" novalidate>
+                <!--novalidate = contre la notif d'erreur de html5 formulaire il affiche donc mon erreur perso-->
+                <label> login : </label>
+                <input type="email" id="email" name="email" required>
+                <label> Password : </label>
+                <input type="password" id="password" class="password">
+                <button type="submit">submit</button>
+            </form>
+            <div class="MsgErreurDiv"></div>
             <div class="container-fluid p-3">
                 <div class="row">
                     <div class="col-6  p-3">
@@ -25,7 +35,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                                <input id="password" data-key="password" type="password" class="user-input form-control" placeholder="password">
+                                <input id="password2" data-key="password" type="password" class="user-input form-control" placeholder="password">
                             </div>
                             <button id="signin-user-btn" type="submit" class="btn btn-primary">Sign In</button>
                         </form>
@@ -65,8 +75,11 @@
                 display: block;
             }
         </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <footer class="footer"></footer>
+    <script src="regex.js"></script>
     <script src="authRegex.js"></script>
-    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/main.js"></script>
 </body>
 </html>

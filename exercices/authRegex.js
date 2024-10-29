@@ -21,7 +21,7 @@ function toggle(id,id2) {
 //!REGEX 
 let signinInput = document.querySelector('#mail');
 console.log(signinInput);
-let passwordInput = document.querySelector('#password');
+let passwordInput = document.querySelector('#password2');
 
 let divDetail = document.querySelector('#log-detail');
 let p = document.createElement('p');

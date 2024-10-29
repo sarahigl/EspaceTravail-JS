@@ -31,9 +31,9 @@ const myTimeout = setTimeout(change, 3000);
 
 function change() {
     const div = document.querySelector('.divTeste');
-    const surprise2 = document.createElement('h1').innerHTML = "EHH ON S'ACCROCHE ! ZEEE PARTI";
+    const surprise2 = document.createElement('h1').innerHTML = "ET ON S'ACCROCHE !";
     div.append(surprise2);
-    document.body.style.backgroundColor = 'pink';
+    document.body.style.backgroundColor = 'red';
 }
 
 // Section: exercices/exoDome2.js
@@ -54,12 +54,12 @@ const ajouterTexte = function (pseudo, duTexte) {
     pElement.innerText = `${pseudo} - ${duTexte}`; 
     divTexteAjout.append(pElement);  
 }
-ajouterTexte('Sarah', "l'èleve studieuse *");
+ajouterTexte('Sarah', "dev junior");
 
 const titreChange = document.querySelector('.titreDom');
 titreChange.addEventListener('click', function() {
     titreChange.setAttribute("style", "color: pink");
-    titreChange.innerHTML = "***Je suis une super nanaaa AHHHHHHH****";
+    titreChange.innerHTML = "nouveau texte !";
 });
 
 const titre2 = document.getElementById('secondTitre');
